@@ -1,0 +1,38 @@
+#--------------------------------------------------------------------
+# Environment configuration. Copy to .env (never commit .env).
+#--------------------------------------------------------------------
+
+CI_ENVIRONMENT = development
+
+app.baseURL = 'http://localhost:8080/'
+# Set to true behind HTTPS in production (redirects http to https, adds HSTS).
+# app.forceGlobalSecureRequests = true
+
+#--------------------------------------------------------------------
+# API
+#--------------------------------------------------------------------
+
+# Required, at least 32 bytes: php -r "echo bin2hex(random_bytes(32));"
+api.jwtSecret = REPLACE_WITH_RANDOM_SECRET
+
+# Comma separated list of frontend origins allowed by CORS.
+api.corsAllowedOrigins = 'http://localhost:3000'
+
+# api.accessTokenTtl = 900
+# api.refreshTokenTtl = 2592000
+# api.loginMaxAttempts = 5
+# api.analysesPerHour = 20
+
+#--------------------------------------------------------------------
+# DATABASE (SQLite file writable/database.sqlite by default)
+#--------------------------------------------------------------------
+
+# MySQL / MariaDB example:
+# database.default.hostname = localhost
+# database.default.database = vietnamese_practice
+# database.default.username = root
+# database.default.password =
+# database.default.DBDriver = MySQLi
+# database.default.port = 3306
+# database.default.charset = utf8mb4
+# database.default.DBCollat = utf8mb4_unicode_ci
